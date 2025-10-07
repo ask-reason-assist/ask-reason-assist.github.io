@@ -159,9 +159,96 @@
         </div>
       </div>
     </div>
-    <!--/ Paper video. -->
-  </div>
-</section>
+  </section>
+
+  <!-- RESULTS SECTION -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths has-text-centered">
+          <h2 class="title is-3">Results</h2>
+          <p class="subtitle is-5">
+            Our method translates natural language to temporal logic with <strong>improved accuracy</strong> and <strong>guaranteed syntactic validity</strong> with grammar constrained generation.
+          </p>
+
+          <div class="table-container">
+            <table class="table is-striped is-hoverable is-fullwidth is-bordered">
+              <thead>
+                <tr>
+                  <th># Ex.</th>
+                  <th>Method Variant</th>
+                  <th>Validity (%)</th>
+                  <th>Accuracy (%)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td rowspan="4">5</td>
+                  <td><strong>Gemma F + P + C (Ours)</strong></td>
+                  <td><strong>100.0 ± 0.00</strong></td>
+                  <td><strong>98.98 ± 0.17</strong></td>
+                </tr>
+                <tr><td>F + P</td><td><span style="color:#f14668;">99.8 ± 0.45</span></td><td>98.98 ± 0.17</td></tr>
+                <tr><td>F</td><td><span style="color:#f14668;">99.0 ± 1.22</span></td><td>84.97 ± 8.65</td></tr>
+                <tr><td>GPT-4 F + P</td><td>100.0 ± 0.00</td><td>62.82 ± 3.66</td></tr>
+
+                <tr>
+                  <td rowspan="4">20</td>
+                  <td><strong>Gemma F + P + C (Ours)</strong></td>
+                  <td><strong>100.0 ± 0.00</strong></td>
+                  <td><strong>97.58 ± 1.16</strong></td>
+                </tr>
+                <tr><td>F + P</td><td><span style="color:#f14668;">99.67 ± 0.01</span></td><td>97.58 ± 1.16</td></tr>
+                <tr><td>F</td><td><span style="color:#f14668;">99.60 ± 0.04</span></td><td>93.73 ± 2.40</td></tr>
+                <tr><td>GPT-4 F + P</td><td>100.0 ± 0.00</td><td>92.73 ± 3.00</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="is-size-6 has-text-grey is-italic">
+            F = few-shot prompting, P = BNF grammar in prompt, C = BNF grammar constrained generation.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths has-text-centered">
+          <p class="subtitle is-5">
+                Our decentralized method tracks the centralized Oracle <strong>within 18%</strong> while significantly outperforming the distance based heuristics (B2) and hybrid approach (B3).
+          </p>
+
+          <div class="table-container">
+            <table class="table is-striped is-hoverable is-fullwidth is-bordered">
+              <thead>
+                <tr>
+                  <th>Method</th>
+                  <th>Time steps added to the system</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Oracle ILS (B1)</td>
+                  <td>4 ± 1.5</td>
+                </tr>
+                <tr>
+                  <td>Ours</td>
+                  <td>4 ± 2.0</td>
+                </tr>
+                <tr>
+                  <td>Closest Helper (B2)</td>
+                  <td>5 ± 3.0</td>
+                </tr>
+                <tr>
+                  <td>Oracle Hybrid (B3)</td>
+                  <td>8 ± 3.0</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 <footer class="footer">
   <div class="container">
