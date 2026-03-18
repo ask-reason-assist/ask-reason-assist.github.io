@@ -96,10 +96,10 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Increased robot deployment, such as in warehousing, has revealed a need for seamless collaboration among heterogeneous robot teams to resolve unforeseen conflicts.
+            Increased robot deployment, such as in warehousing, has revealed a need for collaboration among heterogeneous robot teams to resolve unforeseen conflicts.
           </p>
           <p>
-            To address this challenge, we propose a novel decentralized framework that enables robots to request and provide help.
+            To this end, we propose a peer-to-peer coordination protocol that enables robots to request and provide help without a central task allocator.
           </p>
           <p>
             The process begins when a robot detects a conflict and uses a Large Language Model (LLM) to decide whether external assistance is required.
@@ -117,7 +117,7 @@
           </p>
           <p>
             Our approach significantly outperforms heuristics such as selecting the nearest available candidate helper robot, and achieves performance comparable to a centralized “Oracle” baseline but without heavy information demands.
-          </p>
+          </p>        
         </div>
       </div>
     </div>
@@ -186,25 +186,48 @@
                   <td rowspan="4">5</td>
                   <td><strong>Gemma F + P + C (Ours)</strong></td>
                   <td><strong>100.0 ± 0.00</strong></td>
-                  <td><strong>98.98 ± 0.17</strong></td>
+                  <td><strong>99.24 ± 0.62</strong></td>
                 </tr>
-                <tr><td>F + P</td><td><span style="color:#f14668;">99.8 ± 0.45</span></td><td>98.98 ± 0.17</td></tr>
-                <tr><td>F</td><td><span style="color:#f14668;">99.0 ± 1.22</span></td><td>84.97 ± 8.65</td></tr>
-                <tr><td>GPT-4 F + P</td><td>100.0 ± 0.00</td><td>62.82 ± 3.66</td></tr>
+                <tr>
+                  <td>F + P</td>
+                  <td><span style="color:#f14668;">99.53 ± 0.31</span></td>
+                  <td>99.11 ± 0.82</td>
+                </tr>
+                <tr>
+                  <td>F</td>
+                  <td><span style="color:#f14668;">93.73 ± 6.41</span></td>
+                  <td>92.94 ± 3.88</td>
+                </tr>
+                <tr>
+                  <td>GPT-4 F + P</td>
+                  <td><span style="color:#f14668;">99.87 ± 0.12</span></td>
+                  <td>63.83 ± 8.15</td>
+                </tr>
 
                 <tr>
                   <td rowspan="4">20</td>
                   <td><strong>Gemma F + P + C (Ours)</strong></td>
                   <td><strong>100.0 ± 0.00</strong></td>
-                  <td><strong>97.58 ± 1.16</strong></td>
+                  <td><strong>98.44 ± 0.1</strong></td>
                 </tr>
-                <tr><td>F + P</td><td><span style="color:#f14668;">99.67 ± 0.01</span></td><td>97.58 ± 1.16</td></tr>
-                <tr><td>F</td><td><span style="color:#f14668;">99.60 ± 0.04</span></td><td>93.73 ± 2.40</td></tr>
-                <tr><td>GPT-4 F + P</td><td>100.0 ± 0.00</td><td>92.73 ± 3.00</td></tr>
+                <tr>
+                  <td>F + P</td>
+                  <td><span style="color:#f14668;">99.40 ± 0.53</span></td>
+                  <td>98.03 ± 0.26</td>
+                </tr>
+                <tr>
+                  <td>F</td>
+                  <td><span style="color:#f14668;">99.20 ± 0.40</span></td>
+                  <td>93.54 ± 1.97</td>
+                </tr>
+                <tr>
+                  <td>GPT-4 F + P</td>
+                  <td><span style="color:#f14668;">99.87 ± 0.23</span></td>
+                  <td>93.81 ± 2.04</td>
+                </tr>
               </tbody>
             </table>
-          </div>
-          <p class="is-size-6 has-text-grey is-italic">
+          </div>          <p class="is-size-6 has-text-grey is-italic">
             F = few-shot prompting, P = BNF grammar in prompt, C = BNF grammar constrained generation.
           </p>
         </div>
@@ -214,7 +237,7 @@
       <div class="columns is-centered">
         <div class="column is-four-fifths has-text-centered">
           <p class="subtitle is-5">
-                Our decentralized method tracks the centralized Oracle <strong>within 18%</strong> while significantly outperforming the distance based heuristics (B2) and hybrid approach (B3).
+                Our decentralized method tracks the centralized Oracle <strong>within 22%</strong> while significantly outperforming the distance based heuristics (B2) and hybrid approach (B3).
           </p>
 
           <div class="table-container">
